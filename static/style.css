@@ -1,0 +1,28 @@
+ h1 {
+            color: #d6427a; /* Change the text color to a custom color */
+        }
+
+        .table th {
+            background-color:#0e4177; /* Change the header background color */
+            color: white; /* Change the header text color */
+        }
+
+        .table-striped tbody tr:nth-child(odd) {
+            background-color: #D6EAF8; /* Change the odd row background color */
+        }
+
+        .table-striped tbody tr:nth-child(even) {
+            background-color: #E8F8FF; /* Change the even row background color */
+        }
+
+.btn-primary{
+    color: #fff;
+    background-color: #094e7a;
+    border-color: #0c2b4c;
+    position: absolute;
+    right: 12px;
+    bottom: -23px;
+}
+#up-btn{
+
+}

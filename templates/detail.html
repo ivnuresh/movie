@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block body %}
+<style>
+
+.btn-primary{
+    color: #fff;
+    background-color: #094e7a;
+    border-color: #0c2b4c;
+    position: absolute;
+    right: 12px;
+    bottom: -23px;
+}
+
+</style>
+<h1 class="text-center">Movie Details</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Year</th>
+        <th style="text-align: center;">Image</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>{{movie.name}}</td>
+          <td>{{movie.desc}}</td>
+          <td>{{movie.year}}</td>
+          <td><img src="{{ movie.img.url }}" alt="Movie Image" width="400" height="300"></td>
+
+
+      </tr>
+
+    </tbody>
+</table>
+<a href="{% url 'home' %}" class="btn btn-primary back-button">Back</a>
+
+<a href="{% url 'update_movie' movie.id %}" class=" btn btn-success" id="up-btn">Update</a>
+
+<a href="{% url 'delete_movie' movie.id %}" class=" btn btn-danger" id="up-btn">Delete</a>
+
+{% endblock %}

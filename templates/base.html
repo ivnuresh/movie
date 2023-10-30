@@ -1,0 +1,50 @@
+
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles for color */
+        h1 {
+            color: #d6427a; /* Change the text color to a custom color */
+        }
+
+        .table th {
+            background-color: #0e4177; /* Change the header background color */
+            color: white; /* Change the header text color */
+        }
+
+        .table-striped tbody tr:nth-child(odd) {
+            background-color: #D6EAF8; /* Change the odd row background color */
+        }
+
+        .table-striped tbody tr:nth-child(even) {
+            background-color: #E8F8FF; /* Change the even row background color */
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+
+
+
+             {% block body %}
+                {% endblock %}
+
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JavaScript (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

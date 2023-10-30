@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<h1 class="text-center">Movie List</h1>
+<a href="{% url 'add_movie'  %}" class=" btn btn-primary" id="up-btn" style=" color: #fff;background-color: #6693c3;
+border-color: #135ba9;position: absolute;right: 15px;top: 17px;">Add Movie</a>
+ <table class="table table-striped">
+<thead>
+<tr>
+    <th>Name</th>
+    <th></th>
+</tr>
+</thead>
+<tbody>
+{% for i in mlist %}
+<tr>
+    <td>
+        
+        <a href="{% url 'movie_detail' i.id %}" class="text-decoration-none">{{i.name}}</a>
+    </td>
+    <td><img src="{{ i.img.url }}" alt="Movie Image" width="250" height="250"></td>
+</tr>
+{% endfor %}
+</tbody>
+</tbody>
+ </table>
+
+{% endblock %}
+
