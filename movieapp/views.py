@@ -19,16 +19,19 @@ def get_id(request, id):
     return render(request, "detail.html", context)
 
 def add_movie(request):
-    if request.method=='POST':
-        name=request.POST.get('movieName')
-        des=request.POST.get('description')
+    if request.method == 'POST':
+        name = request.POST.get('movieName')
+        des = request.POST.get('description')
         yr = int(request.POST['year'])
-        ig=request.FILES['image']
-        movie=Movie(name=name,desc=des,year=yr,img=ig) # db field= request field
-        movie.save()
+        ig = request.FILES['image']
+        movie = Movie(name=name, desc=des, year=yr, img=ig)  
+        movie.save()  
 
-       
-    messages.info(request, 'Data uploaded successfully.')
+        messages.info(request, 'Data uploaded successfully.')
+
+        
+        return redirect('home')  
+
     return render(request, "add.html")
 
 def update(request, id):
